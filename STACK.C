@@ -5,6 +5,7 @@ void main()
 {
 int stack[10],top=-1,i,ch,item;
 clrscr();
+	
 do{
 printf("\n1. Push \n2. Pop \n3. Exit \n Enter your choice (1-3) - ");
 scanf("%d",&ch);
