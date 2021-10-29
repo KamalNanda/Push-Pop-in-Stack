@@ -20,7 +20,7 @@ switch(ch)
           break;
   case 3: exit(1);
           break;
-  default: printf("Wrong Choice ");
+  default: printf("Wrong Choice!!!!");
             break;
 }
 }while(ch!=3);
