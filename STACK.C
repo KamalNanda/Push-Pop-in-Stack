@@ -11,7 +11,38 @@ scanf("%d",&ch);
 switch(ch)
 {
   case 1: {
-	    if(top==10)
+	        push();
+          }
+          break;
+  case 2: {
+            pop();
+          }
+          break;
+  case 3: exit(1);
+          break;
+  default: printf("Wrong Choice ");
+            break;
+}
+}while(ch!=3);
+getch();
+}
+
+void pop(){
+    if(top==-1)
+            {
+            printf("Underflow");
+            exit(1);
+            }
+            else{
+            top-=1;
+            printf("Updated stack - ");
+            for(i=0;i<=top;i++)
+              printf("%d ",stack[i]);
+            }
+}
+
+void push(){
+    if(top==10)
             {
             printf("Overflow");
             exit(1);
@@ -25,27 +56,5 @@ switch(ch)
             for(i=0;i<=top;i++)
               printf("%d ",stack[i]);
             }
-          }
-          break;
-  case 2: {
-            if(top==-1)
-            {
-            printf("Underflow");
-            exit(1);
-            }
-            else{
-            top-=1;
-            printf("Updated stack - ");
-            for(i=0;i<=top;i++)
-              printf("%d ",stack[i]);
-            }
-          }
-          break;
-  case 3: exit(1);
-          break;
-  default: printf("Wrong Choice ");
-            break;
 }
-}while(ch!=3);
-getch();
 }
